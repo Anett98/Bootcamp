@@ -1,0 +1,17 @@
+ td, tr, table, th{
+    border: solid black 1px;
+    
+ }
+  
+ td{
+   height: 70px;
+ }
+ .delete{
+  height: 70px;
+  width: 110px;
+ }
+.inpDiv{
+  position: absolute;
+  top: 20px;
+  right: 500px;
+}
