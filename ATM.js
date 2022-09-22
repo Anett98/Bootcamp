@@ -1,4 +1,4 @@
-// DO NOT TOUCH THIS PART
+/////////// I DIDN'T HAVE ENOUGH TIME TO WRITE A GOOD CODE SO IT'S NOT THE BEST SOLUTION //////////////////
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -31,19 +31,19 @@ console.log(card.number)
 
 
 class CardService{
-    #cardList=[]
+    static cardList=[]
 
     static addCard(card){
-       this.#cardList.push(card)
+       this.this.cardList.push(card)
     }
 
 
     static removeCard(card){
-    this.#cardList = this.#cardList.filter(item=>card.cardNumber!==item.cardNumber)
+    this.this.cardList = this.this.cardList.filter(item=>card.cardNumber!==item.cardNumber)
     }
 
     static async checkCardExistence(card){
-        let res = this.#cardList.find(item=>item.cardNumber===card.cardNumber)
+        let res = this.this.cardList.find(item=>item.cardNumber===card.cardNumber)
         if(res) {
             return true
         }
@@ -51,7 +51,7 @@ class CardService{
     }
 
     static async addMoney(cardNumber, moneyAmount){
-        this.#cardList = this.#cardList.map(item=>{
+        this.this.cardList = this.this.cardList.map(item=>{
             if(item.cardNumber === cardNumber) {
                 item.moneyAmount += moneyAmount
                      return item
@@ -64,7 +64,7 @@ class CardService{
 
 
     static async removeMoney(cardNumber, amount){
-        this.#cardList = this.#cardList.map(item=>{
+        this.this.cardList = this.this.cardList.map(item=>{
             if(item.cardNumber === cardNumber) {
                 if( item.moneyAmount>=amount) {
                  item.moneyAmount -= amount
