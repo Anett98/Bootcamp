@@ -1,5 +1,7 @@
 /////////// I DIDN'T HAVE ENOUGH TIME TO WRITE A GOOD CODE SO IT'S NOT THE BEST SOLUTION //////////////////
 
+// DO NOT TOUCH THIS PART
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -34,7 +36,12 @@ class CardService{
     static cardList=[]
 
     static addCard(card){
-       this.this.cardList.push(card)
+        let res = this.this.cardList.find(item=>item.cardNumber===card.cardNumber)
+        if(!res) {
+            this.this.cardList.push(card)
+        } else {
+          throw new Error('This card exists')
+        }
     }
 
 
